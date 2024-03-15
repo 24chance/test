@@ -21,41 +21,41 @@
         <div class="menu">
             <i class="fa fa-bars"></i>
             <div class="sidebar">
-                <a href=""><i class="fa fa-home"></i>Home</a>
-                <a href=""><i class="fa fa-info-circle"></i>About</a>
-                <a href=""><i class="fa-solid fa-blog"></i>Blogs</a>
+                <a href="#"><i class="fa fa-home"></i>Home</a>
+                <a href="about/about.html"><i class="fa fa-info-circle"></i>About</a>
+                <a href="blogs/blog.html"><i class="fa-solid fa-blog"></i>Blogs</a>
                 <a href="" class="dropdown"><i class="fa fa-filter"></i> Genres<i class="fa fa-angle-down"></i>
                     <div class="dropdown-content">
-                        <a href="">Gaming</a>
-                        <a href="">Music</a>
-                        <a href="">Beauty & Fashion</a>
-                        <a href="">Technology</a>
-                        <a href="">Sports</a>
-                        <a href="">Entertainment</a>
+                        <a href="blogs/blog.html">Gaming</a>
+                        <a href="blogs/blog.html">Music</a>
+                        <a href="blogs/blog.html">Beauty & Fashion</a>
+                        <a href="blogs/blog.html">Technology</a>
+                        <a href="blogs/blog.html">Sports</a>
+                        <a href="blogs/blog.html">Entertainment</a>
                     </div>
                 </a>
-                <a href=""><i class="fa fa-phone"></i>Contact</a>
+                <a href="contacts/contact.html"><i class="fa fa-phone"></i>Contact</a>
             </div>
         </div>
 
         <ul class="links">
             <li><i class="fa fa-search"></i></li>
-            <li><a id="active" href="index.html">Home</a></li>
-            <li><a href="index.html">About</a></li>
-            <li><a href="index.html">Blogs</a></li>
+            <li><a id="active" href="#">Home</a></li>
+            <li><a href="about/about.html">About</a></li>
+            <li><a href="blogs/blog.html">Blogs</a></li>
             <li class="dropdown"><a href="#">Genres<i class="fa fa-angle-down"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="index.html">Gaming</a></li>
-                    <li><a href="index.html">Music</a></li>
-                    <li><a href="index.html">Beauty & Fashion</a></li>
-                    <li><a href="index.html">Technology</a></li>
-                    <li><a href="index.html">Sports</a></li>
-                    <li><a href="index.html">Entertainment</a></li>
-                    <li><a href="index.html">Arts</a></li>
+                    <li><a href="blogs/blog.html">Gaming</a></li>
+                    <li><a href="blogs/blog.html">Music</a></li>
+                    <li><a href="blogs/blog.html">Beauty & Fashion</a></li>
+                    <li><a href="blogs/blog.html">Technology</a></li>
+                    <li><a href="blogs/blog.html">Sports</a></li>
+                    <li><a href="blogs/blog.html">Entertainment</a></li>
+                    <li><a href="blogs/blog.html">Arts</a></li>
                 </ul>
             </li>
-            <li><a href="index.html">Contact</a></li>
-            <li><a href="login.html">Login | Register</a></li>
+            <li><a href="contacts/contact.html">Contact</a></li>
+            <li><a href="login/login.html">Login | Register</a></li>
         </ul>
     </nav>
     <div class="search">
@@ -229,6 +229,16 @@
         </div>
     </footer>
 
+    <div class="cookies">
+        <h3>🍪 Cookies Settings</h3>
+        <p>We use cookies to enhance your browsing experience! By continuing to use our website, you consent to the use of cookies in accordance with our <a href='privacy-policy'>Privacy Policy</a>. Click 'Accept' to enjoy personalized content and ads, or manage your preferences in 'Cookie Settings'.</p>
+        <div class="buttons">
+            <button class="accept">Accept</button>
+            <button class="decline">Decline</button>
+        </div>
+        <i class="fa-solid fa-xmark close"></i>
+    </div>
+
     <script>
 
         // global variables
@@ -247,6 +257,8 @@
         const image3 = document.querySelector("#image3");
         const image4 = document.querySelector("#image4");
         const images = [image1, image2, image3, image4];
+        const cookies = document.querySelector(".cookies");
+        const cookiesClose = document.querySelector(".cookies .close");
 
 
 
@@ -341,6 +353,26 @@
             window.scrollTo(0,0);
         })
 
+
+        // show cookies after five seconds
+        setTimeout(() => {
+            cookies.style.bottom = "0";
+        }, 5000);
+
+        //close cookies when close button is clicked
+        cookiesClose.addEventListener("click", ()=>{
+            cookies.style.bottom = "-100%";
+        })
+
+        // accept cookies
+        document.querySelector(".cookies .buttons .accept").addEventListener("click", ()=>{
+            cookies.style.bottom = "-100%";
+        })
+
+        // decline cookies
+        document.querySelector(".cookies .buttons .decline").addEventListener("click", ()=>{
+            cookies.style.bottom = "-100%";
+        })
     </script>
     
 </body>
